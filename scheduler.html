@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <title>Simulation of Various Scheduling Algorithms</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+    <script type="text/javascript" src="scheduler.js"></script>
+    <link rel="stylesheet" type="text/css" href="scheduler.css">
+</head>
+
+<body>
+    <h1> Scheduling Algorithm Simulator </h1>
+    <div id='error_container'>
+        Errors: 
+        <ul id='error_list'></ul>
+    </div>
+    <form id="scheduler_form" action="">
+        <div> Choose a scheduling algorithm:
+            <input type="radio" name="algo" id="round_robin_option">RR</input>
+            <input type="radio" name="algo" id="sjf_option">SJF</input>
+            <input type="radio" name="algo" id="fcfs_option">FCFS</input>
+        </div>
+        <div id="time_quantum" class="extra_option"> 
+            What is the time quantum? <input type="number">
+        </div>
+        <div> Use preemption?
+            <input type="checkbox" id="preemptive_checkbox">
+        </div>
+        <ol id="process_input_list"></ol>
+        <input type="button" id="add_process_input" value="add process">
+        <input type="button" id="delete_process_input" value="delete last process">
+        <input type="button" id="run_button" value="run">
+        <div id="time_slice_container">
+            <ul id="time_slice_list">
+                <li class="time_slice table_row header">
+                    <div class="time_slice_t">t</div>
+                    <div class="time_slice_name">process name</div>
+                </li>
+            </ul>
+        </div>
+    </form>
+</body>
+
+</html>

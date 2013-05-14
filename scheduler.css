@@ -1,0 +1,39 @@
+body { margin-left: 20px; font }
+h1 { font: bold 32px Arial; }
+.extra_option {display:none;}
+#time_slice_container {display:none;}
+#error_container { display: none; color: red;}
+
+#scheduler_form div {
+    margin-top: 10px;
+}
+
+.table_row {
+    margin-left: 0; padding-left: 0;
+    list-style: none;
+}
+
+.table_row div {
+    float: left;
+    display: block;
+    padding: 3px 5px;
+}
+
+.time_slice.header  div{
+    background-color: #ccc;
+    font-weight: bold;
+}
+
+.time_slice_t {
+    border-right: 1px solid #ccc;
+    width: 30px;
+}
+
+
+.table_row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
